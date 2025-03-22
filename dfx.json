@@ -1,0 +1,25 @@
+{
+  "canisters": {
+    "hackthon_backend": {
+      "main": "src/hackthon_backend/main.mo",
+      "type": "motoko"
+    },
+    "hackthon_frontend": {
+      "dependencies": [
+        "hackthon_backend"
+      ],
+      "source": [
+        "src/hackthon_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "hackthon_frontend"
+    }
+  },
+  "defaults": {
+  "build": {
+    "packtool": "mops sources"
+  }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
